@@ -4,13 +4,13 @@ from datetime import datetime
 import time
 
 
-zapi = ZabbixAPI("https://sm-fe01.webmonitor.global")
+zapi = ZabbixAPI("https://endereco.com.br/zabbix")
 # Disable SSL certificate verification
 zapi.session.verify = False
 # Specify a timeout (in seconds)
 zapi.timeout = 10.1
 # informacoes de acesso
-zapi.login("linx.rafael", "stk456rfs")
+zapi.login("usuario.zabbix", "senhaUsuario")
 # mostra versao do zabbix
 print("Connected to Zabbix API Version %s" % zapi.api_version())
 
