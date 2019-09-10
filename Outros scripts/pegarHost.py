@@ -7,19 +7,19 @@ from datetime import datetime
 import time
 
 
-zapi = ZabbixAPI("url_zabbix")
+zapi = ZabbixAPI("**********************************")
 # Disable SSL certificate verification
 zapi.session.verify = False
 # Specify a timeout (in seconds)
 zapi.timeout = 10.1
 # informacoes de acesso
-zapi.login("user_zabbix", "senha_user")
+zapi.login("USER", "PASS")
 # mostra versao do zabbix
 print("Connected to Zabbix API Version %s" % zapi.api_version())
 
 for hosts in zapi.host.get({
-'groupids':'38',
-'output': ['host'],
+'groupids':'983',
+'output': ['host','status'],
 'selectInterfaces': ['ip', 'dns'],
 'selectGroups': ['name']
 }):
